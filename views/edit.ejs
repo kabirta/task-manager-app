@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Edit Task</title>
+</head>
+<body>
+  <h1>Edit Task</h1>
+
+  <form action="/edit/<%= filename %>" method="POST">
+    <label>Title:</label><br>
+    <input type="text" name="newTitle" value="<%= filename.replace('.txt', '').replace(/-/g, ' ') %>" required><br><br>
+
+    <label>Details:</label><br>
+    <textarea name="details" rows="10" cols="50"><%= details %></textarea><br><br>
+
+    <button type="submit">Save Changes</button>
+  </form>
+
+  <a href="/">Back to Home</a>
+</body>
+</html>
